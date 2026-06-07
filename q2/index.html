@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Limited Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Create a Post</h1>
+        <form id="post-form">
+            <textarea id="post-input" placeholder="What's on your mind? (Max 200 characters)" required></textarea>
+            <div class="counter-container">
+                <span id="char-counter">200 characters remaining</span>
+            </div>
+            <button type="submit" id="submit-btn">Post</button>
+        </form>
+        <div id="posts-container">
+            <h2>Submitted Posts</h2>
+            <div id="posts-list"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
