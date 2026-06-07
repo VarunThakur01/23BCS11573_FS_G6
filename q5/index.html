@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="dashboard-header">
+            <h1>Admin Settings Panel</h1>
+        </div>
+        <div class="tabs-container">
+            <div class="tab-list">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="details">Details</button>
+                <button class="tab-btn" data-tab="settings">Settings</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-panel active" id="tab-overview">
+                    <h2>System Overview</h2>
+                    <p>Welcome to the control center. Here you can monitor system activity, inspect server load ratios, and overview active user sessions.</p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-label">Active Users</span>
+                            <span class="stat-value">1,482</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Server Health</span>
+                            <span class="stat-value">99.9%</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Daily API Calls</span>
+                            <span class="stat-value">458.2k</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="tab-details">
+                    <h2>Server Details</h2>
+                    <p>Granular performance details across instances deployed in North America and Western Europe regions.</p>
+                    <table class="details-table">
+                        <thead>
+                            <tr>
+                                <th>Instance</th>
+                                <th>Status</th>
+                                <th>Region</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>API-Gateway-01</td>
+                                <td><span class="badge online">Online</span></td>
+                                <td>us-east-1</td>
+                            </tr>
+                            <tr>
+                                <td>Job-Worker-03</td>
+                                <td><span class="badge online">Online</span></td>
+                                <td>eu-west-1</td>
+                            </tr>
+                            <tr>
+                                <td>DB-Replica-02</td>
+                                <td><span class="badge maintenance">Maintenance</span></td>
+                                <td>us-west-2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-panel" id="tab-settings">
+                    <h2>Configuration Settings</h2>
+                    <p>Adjust core preferences and customize notification endpoints for cloud metrics dispatching.</p>
+                    <form class="settings-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <label>System Email Alert Target</label>
+                            <input type="email" value="admin@enterprise.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Autoscaling Threshold</label>
+                            <select>
+                                <option>80% CPU Threshold</option>
+                                <option>90% CPU Threshold</option>
+                                <option>Custom Metric Rule</option>
+                            </select>
+                        </div>
+                        <button class="save-settings-btn">Apply Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
