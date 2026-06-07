@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Product Showcase</h1>
+        <div id="carousel" class="carousel">
+            <div class="carousel-inner" id="carousel-inner">
+                <img src="https://picsum.photos/id/1018/600/400" alt="Landscape 1" class="carousel-slide active">
+                <img src="https://picsum.photos/id/1015/600/400" alt="Landscape 2" class="carousel-slide">
+                <img src="https://picsum.photos/id/1019/600/400" alt="Landscape 3" class="carousel-slide">
+                <img src="https://picsum.photos/id/1022/600/400" alt="Landscape 4" class="carousel-slide">
+            </div>
+            
+            <button class="carousel-btn prev-btn" id="prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn" id="next-btn">&gt;</button>
+
+            <div class="carousel-dots" id="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
