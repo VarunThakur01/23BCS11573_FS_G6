@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <h2>Apex Analytics</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">Dashboard</a>
+                <a href="#" class="nav-item">Analytics</a>
+                <a href="#" class="nav-item">Sales</a>
+                <a href="#" class="nav-item">Customers</a>
+                <a href="#" class="nav-item">Settings</a>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <header class="header">
+                <button class="menu-btn" id="menu-btn">&#9776;</button>
+                <div class="header-search">
+                    <input type="text" placeholder="Search metrics...">
+                </div>
+                <div class="header-controls">
+                    <select id="time-filter">
+                        <option value="7d">Last 7 Days</option>
+                        <option value="30d">Last 30 Days</option>
+                        <option value="all">All Time</option>
+                    </select>
+                </div>
+            </header>
+
+            <main class="dashboard-viewport">
+                <section class="kpi-grid">
+                    <div class="kpi-card">
+                        <span class="kpi-label">Revenue</span>
+                        <div class="kpi-value" id="kpi-revenue">$24,890</div>
+                        <span class="kpi-trend positive" id="kpi-revenue-trend">+12.4% vs last week</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-label">New Customers</span>
+                        <div class="kpi-value" id="kpi-customers">1,482</div>
+                        <span class="kpi-trend positive" id="kpi-customers-trend">+8.2% vs last week</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-label">Conversion Rate</span>
+                        <div class="kpi-value" id="kpi-conversion">2.84%</div>
+                        <span class="kpi-trend negative" id="kpi-conversion-trend">-0.4% vs last week</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-label">Active Sessions</span>
+                        <div class="kpi-value" id="kpi-sessions">482</div>
+                        <span class="kpi-trend positive" id="kpi-sessions-trend">+24.1% vs last week</span>
+                    </div>
+                </section>
+
+                <div class="adaptive-grid">
+                    <section class="chart-section card">
+                        <h3>Weekly Activity</h3>
+                        <div class="bar-chart">
+                            <div class="chart-bar-container">
+                                <div class="chart-bar" style="height: 60%;" data-height="60%"></div>
+                                <span class="chart-label">Mon</span>
+                            </div>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar" style="height: 75%;" data-height="75%"></div>
+                                <span class="chart-label">Tue</span>
+                            </div>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar" style="height: 45%;" data-height="45%"></div>
+                                <span class="chart-label">Wed</span>
+                            </div>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar" style="height: 90%;" data-height="90%"></div>
+                                <span class="chart-label">Thu</span>
+                            </div>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar" style="height: 80%;" data-height="80%"></div>
+                                <span class="chart-label">Fri</span>
+                            </div>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar" style="height: 55%;" data-height="55%"></div>
+                                <span class="chart-label">Sat</span>
+                            </div>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar" style="height: 35%;" data-height="35%"></div>
+                                <span class="chart-label">Sun</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="table-section card">
+                        <h3>Recent Payments</h3>
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Customer</th>
+                                        <th>Status</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="payments-body">
+                                    <tr>
+                                        <td>Alex Rivera</td>
+                                        <td><span class="badge status-success">Success</span></td>
+                                        <td>$320.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marcus Chen</td>
+                                        <td><span class="badge status-success">Success</span></td>
+                                        <td>$1,200.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sarah Vance</td>
+                                        <td><span class="badge status-pending">Pending</span></td>
+                                        <td>$85.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emily Taylor</td>
+                                        <td><span class="badge status-failed">Failed</span></td>
+                                        <td>$450.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
