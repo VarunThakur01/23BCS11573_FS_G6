@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Project Workspace</h1>
+        <div class="kanban-board">
+            <div class="kanban-column" id="todo">
+                <div class="column-header">
+                    <h2>To Do</h2>
+                </div>
+                <div class="column-cards">
+                    <div class="task-card" draggable="true" id="task-1">
+                        <h3>Design landing page wireframes</h3>
+                        <p>Create layout mockups for homepage and feature pages.</p>
+                    </div>
+                    <div class="task-card" draggable="true" id="task-2">
+                        <h3>Write API documentation</h3>
+                        <p>Document endpoints for user auth and tasks schema.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban-column" id="in-progress">
+                <div class="column-header">
+                    <h2>In Progress</h2>
+                </div>
+                <div class="column-cards">
+                    <div class="task-card" draggable="true" id="task-3">
+                        <h3>Implement router controller</h3>
+                        <p>Set up server route middleware and error handlers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban-column" id="done">
+                <div class="column-header">
+                    <h2>Done</h2>
+                </div>
+                <div class="column-cards">
+                    <div class="task-card" draggable="true" id="task-4">
+                        <h3>Repository initialization</h3>
+                        <p>Create boilerplate code structure and gitignore.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
